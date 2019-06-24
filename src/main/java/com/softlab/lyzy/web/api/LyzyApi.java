@@ -114,5 +114,19 @@ public class LyzyApi {
         return new RestData(StringUtil.replace(rtv.toString()));
     }
 
+    @RequestMapping(value = "/lzq", method = RequestMethod.GET)
+    public RestData selectAllLZQ(@RequestParam(value="str") String str){
+        logger.info("str : " + str);
+        List<Map <String, Object> > rtv = argicsService.selectAllLzqVo(str);
+        return new RestData(StringUtil.replace(rtv.toString()));
+    }
+
+    @RequestMapping(value = "/lz", method = RequestMethod.GET)
+    public RestData selectAllLZ(@RequestParam(value="str") String str){
+        logger.info("str : " + str);
+        List<Map <String, Object> > rtv = argicsService.selectAllLzVo(str);
+        return new RestData(StringUtil.replace(rtv.toString()));
+    }
+
 
 }

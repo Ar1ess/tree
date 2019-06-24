@@ -12,4 +12,7 @@ public interface ArgicsService {
 
     List<Map<String, Object>> selectArgics(String str);
 
+    List<Map<String,Object>> selectAllLzqVo(String str);
+
+    List<Map<String,Object>> selectAllLzVo(String str);
 }

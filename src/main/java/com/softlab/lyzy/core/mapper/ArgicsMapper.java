@@ -31,4 +31,10 @@ public interface ArgicsMapper {
 
     @Select("select AVG(MGQXJ) as avgXj, AVG(Z_MGQZS) as avgZs, YSSZZ from bolixian_xbm2017 where XIANG_NAME = #{str} AND YSSZZ = '柞树林'")
     List<BolixianXBM> selectArgicsZsl(String str);
+
+    @Select("select AVG(MGQXJ) as avgXj,AVG(Z_MGQZS) as avgZs, LZ from bolixian_xbm2017 WHERE XIANG_NAME=#{xiangName} and LZ is not null GROUP BY LZ")
+    List<BolixianXBM> selectAllLZVo(String xiangName);
+
+    @Select("select AVG(MGQXJ) as avgXj,AVG(Z_MGQZS) as avgZs,LZQ from bolixian_xbm2017 WHERE XIANG_NAME=#{xiangName} and LZQ is not null GROUP BY LZQ")
+    List<BolixianXBM> selectAllLZQVo(String xiangName);
 }
