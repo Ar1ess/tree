@@ -19,7 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <commons.codec.version>1.11</commons.codec.version>
-        <mysql.connector.version>5.1.47</mysql.connector.version>
+        <mysql.connector.version>8.0.28</mysql.connector.version>
         <apache.poi.version>4.0.1</apache.poi.version>
         <java.version>1.8</java.version>
     </properties>
